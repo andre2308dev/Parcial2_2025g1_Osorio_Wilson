@@ -4,8 +4,107 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
+/* ====== Estilo Global ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f1c40f;
+    background: linear-gradient(-45deg, #0d1117, #1e1e1e, #0d1117, #111);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Fondo animado */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ====== Encabezados ====== */
+h1,
+h2,
+h3 {
+    color: #2980b9;
+    /* Azul elegante */
+    font-weight: 700;
+}
+
+h2 span {
+    color: #e67e22;
+    /* Resalta palabras clave en naranja */
+}
+
+/* ====== Navbar ====== */
+.navbar {
+    background-color: #111 !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #f1c40f !important;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #2980b9 !important;
+    /* Azul en hover */
+}
+
+/* ====== Botones ====== */
+.btn-primary {
+    background: linear-gradient(45deg, #f1c40f, #e67e22);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #2980b9, #f1c40f);
+    color: #fff;
+}
+
+/* ====== Cards ====== */
+.card {
+    background-color: #1e1e1e;
+    color: #ddd;
+    border: 1px solid #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(241, 196, 15, 0.4);
+}
+
+.card-title {
+    color: #f1c40f;
+}
+
+.card-text {
+    color: #bbb;
+}
+
+/* ====== Footer ====== */
+footer {
+    background-color: #111;
+    color: #bbb;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #2980b9;
 }
