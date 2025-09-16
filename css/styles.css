@@ -1,45 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* ====== Estilo Global ====== */
 body {
     font-family: 'Poppins', sans-serif;
     color: #f1c40f;
-    background: linear-gradient(-45deg, #0d1117, #1e1e1e, #0d1117, #111);
-    background-size: 400% 400%;
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     animation: gradientBG 15s ease infinite;
 }
 
-/* Fondo animado */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* ====== Encabezados ====== */
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+
 h1,
 h2,
 h3 {
     color: #2980b9;
-    /* Azul elegante */
     font-weight: 700;
+}
+
+.nav-link {
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#titulo2 {
+    color: #f1c40f;
+    font-size: 50px;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    text-shadow:
+        0 0 2px #f1c40f,
+        0 0 5px #e6b800,
+        0 0 8px #e6b800;
+    animation: neonYellow 0.5s infinite alternate;
+}
+
+@keyframes neonYellow {
+    from {
+        text-shadow:
+            0 0 2px #f1c40f,
+            0 0 5px #e6b800,
+            0 0 8px #e6b800;
+    }
+
+    to {
+        text-shadow:
+            0 0 3px #f1c40f,
+            0 0 6px #ffd633,
+            0 0 10px #ffd633;
+    }
+}
+
+#texto2 {
+    color: #FFFFFF;
+    font-size: 24px;
 }
 
 h2 span {
     color: #e67e22;
-    /* Resalta palabras clave en naranja */
+}
+
+.card-body {
+    background-color: #1C1529;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 /* ====== Navbar ====== */
@@ -55,10 +91,12 @@ h2 span {
 
 .navbar .nav-link:hover {
     color: #2980b9 !important;
-    /* Azul en hover */
 }
 
-/* ====== Botones ====== */
+.navbar .navbar-brand:hover {
+    color: #2980b9 !important;
+}
+/* ====== Buttons ====== */
 .btn-primary {
     background: linear-gradient(45deg, #f1c40f, #e67e22);
     border: none;
@@ -107,4 +145,111 @@ footer a {
 
 footer a:hover {
     color: #2980b9;
+}
+
+/* Íconos sociales */
+.social-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin: 0 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    background-color: #f1c40f;
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    color: #000;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.correo-link {
+    color: #f1c40f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.correo-link:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.neon-blue {
+    color: #00f7ff;
+    text-shadow:
+        0 0 3px #00f7ff,
+        0 0 6px #00f7ff,
+        0 0 12px #00e5ff,
+        0 0 20px #00d9ff;
+    animation: neonPulse 1s infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow:
+            0 0 3px #00f7ff,
+            0 0 6px #00f7ff,
+            0 0 12px #00e5ff,
+            0 0 20px #00d9ff;
+    }
+
+    to {
+        text-shadow:
+            0 0 4px #00e5ff,
+            0 0 8px #00e5ff,
+            0 0 16px #00d9ff,
+            0 0 24px #00d9ff;
+    }
+}
+
+.navbar .nav-link.active {
+    color: #00f7ff !important;
+    font-weight: 700;
+    text-shadow: 0 0 6px #00f7ff, 0 0 12px #00f7ff;
+    border-bottom: 2px solid #00f7ff;
+}
+
+.navbar .nav-link:hover {
+    color: #f1c40f !important;
+}
+
+.navbar {
+    padding: 10px 15px;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+h1,
+#titulo2 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+p {
+    font-size: clamp(16px, 2vw, 18px);
 }
